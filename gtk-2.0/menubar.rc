@@ -1,0 +1,103 @@
+#################### MENUBAR ###################
+
+
+style "menubar"		
+{
+  fg[NORMAL] = "#000000"
+  text[NORMAL] = "#000000"
+  fg[PRELIGHT] = "#000000"
+  fg[ACTIVE] = "#000000"
+  fg[INSENSITIVE] = "#000000"
+  text[PRELIGHT] = "#000000"
+
+xthickness			= 1
+ythickness			= 2
+	engine "pixmap"
+	{
+		image
+		{
+			function	= BOX
+			state 	= NORMAL
+			file		= "menubar.png"
+			border	= { 2, 2, 2, 2 }
+			stretch	= TRUE
+    		}
+
+		image
+		{
+			function	= BOX
+			state 	= ACTIVE
+			file		= "menubar.png"
+			border	= { 2, 2, 2, 2 }
+			stretch	= TRUE
+    		}
+
+		image
+		{
+			function	= BOX
+			state 	= INSENSITIVE
+			file		= "menubar.png"
+			border	= { 2, 2, 2, 2 }
+			stretch	= TRUE
+    		}
+
+  image
+    {
+      			function	= BOX
+      			state 	= PRELIGHT
+     			file		= "menubar.png"
+			border	= { 10, 10, 10, 10 }
+      			stretch	= TRUE
+    }
+
+ 	}
+}
+
+style "menuitem"	
+{
+  xthickness				= 1
+  fg[PRELIGHT] 		= "#000000"
+  text[PRELIGHT] 	= "#000000"
+  
+
+  engine "pixmap"
+  {
+    image
+    {
+      function			= BOX
+      recolorable			= TRUE
+      file				= "menuitem.png"
+      border				= { 10, 10, 10, 10 }
+      stretch				= TRUE
+    }
+}
+}
+
+##################### LISTHEADERS ###################x
+
+#style "list-header"
+{
+   
+
+  fg[NORMAL] = "#ffffff"
+  text[NORMAL] = "#ffffff"
+
+   engine "pixmap" 
+	{
+
+	#This image is used to draw the headers of columns in list views when they are
+	#not selected.
+    	image
+      		{
+        		function        	= BOX
+			recolorable    	= TRUE
+			state			= NORMAL
+			file            	= "list-header.png"
+			border          	= { 2, 2, 2, 2 }
+			stretch         	= TRUE
+      		}
+}
+}
+
+
+
